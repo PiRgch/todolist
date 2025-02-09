@@ -3,19 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 220, 15%, 20%; /* Remplacez par votre couleur de fond */
+  --foreground: 0, 0%, 100%; /* Couleur du texte, par exemple blanc */
+  
+  --primary: 0, 0%, 100%; /* Couleur primaire (HSL) */
+  --primary-foreground: 0, 0%, 0%; /* Couleur de texte pour la couleur primaire (noir) */
+
+  --secondary: 120, 100%, 50%; /* Couleur secondaire */
+  --secondary-foreground: 0, 0%, 100%; /* Couleur de texte pour la couleur secondaire */
+  
+  --muted: 200, 10%, 60%; /* Couleur pour les éléments "muted" */
+  --muted-foreground: 0, 0%, 100%; /* Couleur de texte pour "muted" */
+  
+  --accent: 50, 100%, 50%; /* Couleur d'accent */
+  --accent-foreground: 0, 0%, 100%; /* Couleur de texte pour "accent" */
+  
+  --destructive: 0, 100%, 50%; /* Couleur destructive (par exemple rouge vif) */
+  --destructive-foreground: 0, 0%, 100%; /* Couleur de texte pour "destructive" */
+  
+  --border: 0, 0%, 80%; /* Couleur de bordure */
+  --input: 0, 0%, 95%; /* Couleur pour les champs de formulaire */
+  
+  --ring: 0, 0%, 70%; /* Couleur de l'anneau de focus */
+  
+  --chart-1: 210, 100%, 70%; /* Exemple de couleur pour un graphique */
+  --chart-2: 120, 100%, 70%;
+  --chart-3: 60, 100%, 70%;
+  --chart-4: 0, 100%, 70%;
+  --chart-5: 300, 100%, 70%;
+
+  --radius: 8px; /* Exemple de rayon de bordure */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Roboto/Roboto-Variable.ttf') format('truetype');
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto;
 }

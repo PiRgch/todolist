@@ -1,32 +1,23 @@
-import { columns } from "@/components/datatable/column"
-import { DataTable } from "@/components/datatable/todolist-datatable"
+"use client";
 
-export type Payment = {
-    id: string
-    amount: number
-    status: "pending" | "processing" | "success" | "failed"
-    email: string
-  }
+import { columns } from "@/components/datatable/column";
+import { DataTable } from "@/components/datatable/todolist-datatable";
+import { useTodoStore } from "@/store/useTodoStore";
+import { useEffect } from "react";
 
-async function getData(): Promise<Payment[]> {
-  // Fetch data from your API here.
-  return [
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    // ...
-  ]
-}
+export default function Todolist() {
+  const { todos, loading, error, fetchTodos } = useTodoStore
+  ();
 
-export default async function Todolist() {
-  const data = await getData()
+  useEffect(() => {
+    fetchTodos(); // Charger les données au montage
+  }, [fetchTodos]);
+
+  console.log("todos", { todos, loading, error });
 
   return (
     <div className="container mx-auto py-10">
-      <DataTable columns={columns} data={data} />
+      <DataTable columns={columns} data={todos} />
     </div>
-  )
+  );
 }

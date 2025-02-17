@@ -1,7 +1,7 @@
-import { AddModalTodo } from "@/components/AddModalTodo";
-import Todolist from "@/components/datatable/Todolist";
-import Title from "@/components/Title";
-import { RetroGrid } from "@/components/ui/Retro-grid";
+import { AddModalTodo } from "@/components/addModalTodo";
+import Todolist from "@/components/datatable/todolist";
+import Title from "@/components/title";
+import { RetroGrid } from "@/components/ui/retro-grid";
 
 export default function Home() {
     return (

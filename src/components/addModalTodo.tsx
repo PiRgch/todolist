@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-import { DatePicker } from "./datePicker";
+import { DatePicker } from "./DatePicker";
 import { useTodoStore } from "@/store/useTodoStore";
 
 export function AddModalTodo() {

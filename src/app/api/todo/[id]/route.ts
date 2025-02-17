@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 const prisma = new PrismaClient();
 
 // GET /api/todo/[id] (single todo by id)
-export const GET = async ({params}: {params: Promise<{id: string}>}) => {
+export const GET = async (request: Request, {params}: {params: Promise<{id: string}>}) => {
     const id = (await params).id;
     try {
         const todo = await prisma.todo.findUnique({
